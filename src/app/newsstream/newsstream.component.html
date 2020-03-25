@@ -1,0 +1,19 @@
+<header> 
+    <h4>Covid-19 News Stream</h4>
+</header>
+<section class="card">
+    <div  *ngFor="let news of source.articles">
+        <div *ngIf="source" class="news-articles">
+            <a href="{{news.url}}" target="new"> <h3>{{news.title}}</h3></a>
+            <div class="news-content">
+                <div class="image-date">
+                    <img src="{{news.urlToImage}}" alt="">
+                    <div class="news-publishedAt" >{{news.publishedAt|date:'mediumDate'}} {{news.publishedAt |date:'shortTime'}}</div>
+                </div>
+                
+                <div class="news-preview">{{news.description}}</div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</section>
