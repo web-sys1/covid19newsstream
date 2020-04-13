@@ -12,6 +12,6 @@ export class GetDataService {
   private DataUrl = environment.api_url
 
   postNews(){
-    return this.http.get(this.DataUrl,{params:{'q':'coronavirus', 'from':'2020-03-23&', 'sortBy':'popularity&', 'apiKey':'a7aeb2fbce474893a1bdc9411ee2de9d'}} )
+    return this.http.get(this.DataUrl,{params:{'q':'coronavirus', 'from':'2020-03-23&', 'sortBy':'publishedAt&', 'apiKey':'7d949991a07d4c03994dddd28b3be7ee'}} )
   }
 }
